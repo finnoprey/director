@@ -27,7 +27,11 @@ export async function middleware(req, ev) {
       const redirect = data.find((r) => {
         return r.from == path.replace('/', '')
       })
-      return NextResponse.redirect(redirect.to)
+      if (redirect) {
+        return NextResponse.redirect(redirect.to)
+      } else {
+        return new NextResponse('This link is either invalid or has expired.')
+      }
     }
   }
 }
