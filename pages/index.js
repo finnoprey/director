@@ -1,18 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Director</title>
         <meta name="description" content="Redirect management application." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Director</h1>
-      <p>The redirect management application.</p>
-    </div>
+      <div className={styles.container}>
+        
+        <h1 className={styles.title}>Director</h1>
+        <p className={styles.description}>By <Link href="/github">Finn O&apos;Prey</Link></p>
+      </div>
+    </>
   )
 }
