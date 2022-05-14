@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Director</title>
+        <title>Director - Dashboard</title>
         <meta name="description" content="Redirect management application." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Director</h1>
+      <h1>Dashboard</h1>
       <p>The redirect management application.</p>
     </div>
   )
