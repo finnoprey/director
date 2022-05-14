@@ -3,8 +3,6 @@ import { supabase } from '../utils/supabaseClient'
 import { useState, useEffect } from 'react'
 
 import styles from '../styles/Home.module.css'
-import Account from '../components/Account/Account'
-import Auth from '../components/Auth/Auth'
 
 export default function Home() {
   const [session, setSession] = useState(null)
@@ -24,7 +22,6 @@ export default function Home() {
         <meta name="description" content="Redirect management application." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {session ? <Account key={session.user.id} session={session} /> : <Auth />}
     </div>
   )
 }

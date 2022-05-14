@@ -1,7 +1,7 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
 export async function middleware(req, ev) {
-  const PERMITTED = ['/dashboard', '/', '/login']
+  const PERMITTED = ['/dashboard', '/', '/login', '/shorten', '/api/shorten']
 
   let path = req.nextUrl.pathname
 
