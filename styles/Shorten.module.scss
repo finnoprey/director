@@ -1,20 +1,16 @@
+@use 'base';
+
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include base.flex-column;
 
   /* width: min(100%, 700px);
   margin-inline: auto; */
   height: 100vh;
-  background-color: #000;
+  background-color: black;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include base.flex-column;
 }
 
 .title {
@@ -24,10 +20,10 @@
 
 .url {
   width: 50vw;
-  border: #fff;
+  border: white;
   border-width: 5px;
   border-style: solid;
-  background: #000;
+  background: black;
   appearance: none;
   padding: 12px;
   border-radius: 4px;
@@ -43,5 +39,5 @@
   height: 60px;
   border-radius: 4px;
   border-style: none;
-  background-color: rgb(255, 59, 216);
+  background-color: base.$primary;
 }

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
-import styles from '../styles/Shorten.module.css'
+import styles from '../styles/Shorten.module.scss'
 
 export default function Home() {
   return (
