@@ -1,13 +1,12 @@
+@use 'base';
+
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include base.flex-column;
 
   /* width: min(100%, 700px);
   margin-inline: auto; */
   height: 100vh;
-  background-color: #000;
+  background-color: black;
 }
 
 .title {
@@ -17,12 +16,11 @@
 
   background-image: linear-gradient(
     90deg,
-    #231557 0%,
-    #44107a 30%,
-    #ff1391 60%,
-    #231557 100%
+    darken(base.$secondary, 40) 0%,
+    darken(base.$secondary, 30) 30%,
+    base.$primary 60%,
+    darken(base.$secondary, 40) 100%
   );
-  /* Make 200% after? */
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -32,20 +30,19 @@
 }
 
 .description {
-  color: rgb(201, 201, 201);
+  color: lightgray;
 
   margin-top: max(-5vw, -50px);
   font-size: min(70px, 6vw);
   font-weight: 300;
-}
 
-.description a {
-  font-weight: 600;
-}
-
-.description a:hover {
-  color: rgb(255, 255, 255);
-  transition: all 0.5s;
+  a {
+    font-weight: 600;
+    &:hover {
+      color: white;
+      transition: all 0.5s;
+    }
+  }
 }
 
 @keyframes spin { 

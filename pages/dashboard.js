@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { supabase } from '../utils/supabaseClient'
 import { useState, useEffect } from 'react'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   const [session, setSession] = useState(null)
